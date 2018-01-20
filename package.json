@@ -1,0 +1,23 @@
+{
+  "name": "socket",
+  "version": "1.0.0",
+  "description": "websocket broadcaster",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mac2000/socket.git"
+  },
+  "keywords": [],
+  "author": "Alexandr Marchenko <marchenko.alexandr@gmail.com> (https://mac-blog.org.ua)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mac2000/socket/issues"
+  },
+  "homepage": "https://github.com/mac2000/socket#readme",
+  "dependencies": {
+    "ws": "^4.0.0"
+  }
+}
