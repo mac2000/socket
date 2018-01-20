@@ -16,27 +16,15 @@
     </form>
 
     <script>
-        const socket = new WebSocket('sock.azurewebsites.net')
+        const socket = new WebSocket('wss://sock.azurewebsites.net')
 
-        socket.onopen = function () {
-            console.log('open')
-        }
-
-        socket.onclose = function () {
-            console.log('close')
-        }
-
-        socket.onerror = function (error) {
-            console.log('error', error)
-        }
-
-        socket.onmessage = function (event) {
-            console.log('message', event.data)
-        }
+        socket.onopen = () => console.log('open')
+        socket.onclose = () => console.log('close')
+        socket.onerror = error => console.log('error', error)
+        socket.onmessage = event => console.log('message', event.data)
 
         frm.addEventListener('submit', event => {
             event.preventDefault()
-
             socket.send(msg.value)
         })
     </script>
